@@ -1,5 +1,6 @@
 #Creating a dataset from a dictionary, lists, and reading from a CSV file using pandas.
 
+import os
 import pandas as pd
 
 #Creating a dataset from a dictionary
@@ -39,7 +40,13 @@ print("Data frame from list2 :\n",df_from_list2)
 
 # #Reading from a CSV file using pandas
 
+csv_file_path = 'practicals\data_file.csv'
 
-df_from_csv = pd.read_csv('data.csv')
+# if os.path.exists(csv_file_path):
+#     print("File exists!")
+# else:
+#     print("File does not exist.")
+
+df_from_csv = pd.read_csv(csv_file_path)
 
 print("Data frame from csv :\n",df_from_csv)
